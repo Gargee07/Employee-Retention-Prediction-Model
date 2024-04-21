@@ -35,6 +35,6 @@ To deploy this project run
 ## Screenshots
 
 
-![image 1](https://drive.google.com/file/d/12mO99e4xjuRxIGVNwGi1Rij-L60ItyI7/view?usp=sharing)
+![Screenshot 2024-04-14 200540](https://github.com/Gargee07/Employee-Retention-Prediction-Model/assets/121877344/4c5a1e00-9998-4220-a830-9db90ef79d26)
 
 ![image 2](https://drive.google.com/file/d/1Lfs5E-c1rcqHDl1NpOJAu6o7wcyKox8i/view?usp=drive_link)
