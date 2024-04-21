@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Churn Prediction</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Retention Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="number_project">Number of Projects:</label><br>
+            <input type="number" id="number_project" name="number_project" value="3" min="1" max="10"><br>
+            <label for="average_montly_hours">Average Monthly Hours:</label><br>
+            <input type="number" id="average_montly_hours" name="average_montly_hours" value="500" min="1" max="1000"><br>
+            <!-- Add input fields for other features -->
+            <label for="time_spend_company">Time Spent in Company (years):</label><br>
+            <input type="number" id="time_spend_company" name="time_spend_company" value="6" min="1" max="15"><br>
+            <label for="Work_accident">Work Accident (0 or 1):</label><br>
+            <input type="number" id="Work_accident" name="Work_accident" value="0" min="0" max="1"><br>
+            <label for="promotion_last_5years">Promotion in Last 5 Years (0 or 1):</label><br>
+            <input type="number" id="promotion_last_5years" name="promotion_last_5years" value="0" min="0" max="1"><br>
+            <label for="satisfaction_level">Satisfaction Level (0.0 to 1.0):</label><br>
+            <input type="number" id="satisfaction_level" name="satisfaction_level" step="0.01" min="0" max="1" value="0.9"><br>
+            <label for="last_evaluation">Last Evaluation (0.0 to 1.0):</label><br>
+            <input type="number" id="last_evaluation" name="last_evaluation" step="0.01" min="0" max="1" value="0.89"><br>
+            <label for="salary_num">Salary (0=high, 1=low, 2=medium):</label><br>
+            <input type="number" id="salary_num" name="salary_num" min="0" max="2" value="1"><br>
+            <label for="department_num">Department (0=IT, 1=RandD, ..., 8=support, 9=technical):</label><br>
+            <input type="number" id="department_num" name="department_num" min="0" max="9" value="0"><br>
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
